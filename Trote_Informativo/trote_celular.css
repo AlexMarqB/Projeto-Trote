@@ -1,0 +1,48 @@
+@media (max-width: 900px) {
+    .ImgLogo {
+        grid-area: header;
+        width: 100%;
+        min-width: 252.5px; 
+        min-height: 466.5px;
+        align-self: center !important;
+        margin-left: 30.5%;
+        padding-left: 14.5%;
+       
+    }
+
+    #arroba {
+        font-size: 20pt;
+        text-align: center;
+        padding-left: 63%;
+        margin-left: 10.5%;
+        color: whitesmoke;
+        margin-top: 10px;
+    }
+
+    input[type="button" i] {
+        margin: 1rem 0;
+        height: 4rem;
+        width: 100%;
+        min-width: 25%;
+    
+    cursor: pointer;
+    
+        background: var(--botão-cor);
+        color: var(--white-100);
+        border-color: var(--white-200);
+        border-radius: 70px;
+        box-sizing: content-box;
+    }
+    
+    input[type="button" i]:hover {
+        background-color: black;
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+
+    .imgA {
+        margin: 10px;
+        max-width: 70vw;
+    }
+}
+    

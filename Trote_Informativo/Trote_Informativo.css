@@ -1,0 +1,181 @@
+:root {
+    --text-color: white;
+    --input-color: whitesmoke;
+    --input-hover-color: black;
+    --bg-url: url(./Assets-Informativo/bg-mobile.jpg);
+    /* cor da borda dos links no fundo escuro */
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --realce-color: rgba(255, 255, 255, 0.2);
+    --switch-url: url(./Assets-Informativo/moon-stars.svg);
+  }
+  
+  .claro {
+    --text-color: black;
+    --input-color: rgb(66, 61, 61);
+    --input-hover-color: white;
+    --bg-url: url(./Assets-Informativo/bg-mobile-light.jpg);
+    /* cor da borda dos links no fundo claro */
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --realce-color: rgba(0, 0, 0, 0.2);
+    --switch-url: url(./Assets-Informativo/sun.svg);
+  }
+
+body {
+    background: var(--bg-url) no-repeat;
+}
+
+.headers {
+    grid-area: header;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+#switch button {
+    border: 1px;
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-url) no-repeat center;
+    border-radius: 50%;
+
+    position: absolute; /* posicionado em relação à div switch */
+    top: 50%;
+    left: 0;
+    z-index: 1; /* camada 1, outros elementos estão na camada 0 */
+    /* translate ele é um deslocamento do elemento
+    valor é negativo pois precisamos subir elemento*/
+    transform: translateY(-50%); 
+}
+
+#switch span {
+    border: 1px solid var(--stroke-color);
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border-radius: 9999px;
+}
+
+.claro #switch button {
+    right: 0;
+    left: initial;
+}
+
+.mains {
+    grid-area: main;
+    color: var(--text-color);
+}
+
+/* Formata e estiliza os textos */
+#introdução {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 34pt;
+}
+
+#explicação {
+    font-size: 24pt;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Formata e centraliza a imagem de logo */
+
+#Logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.ImgLogo {
+    width: 20%;
+    text-align: center;
+    position: center; 
+}
+
+#iconInsta {
+    font-size: 20pt !important;
+    text-align: center;
+    margin-top: 10px !important;
+    background-color: var(--input-color);
+    border-radius: 15px !important;
+    padding: 0 !important;
+}
+
+#arroba {
+    font-size: 17pt;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 10px;
+
+}
+
+/* Estiliza os botões */
+input {
+    font-size: 20pt;
+}
+
+input[type="button" i] {
+    margin: 1rem 0;
+    height: 4rem;
+    width: 35%;
+    min-width: 25%;
+
+cursor: pointer;
+
+    background: var(--surface-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+    border-radius: 70px;
+    box-sizing: border-box;
+}
+
+input[type="button" i]:hover {
+    background-color: var(--surface-color-hover);
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.footers {
+    grid-area: footer;
+    text-align: left;
+}
+
+.ConteudoT {
+    display: none;
+}
+
+
+/*controle dos textos que aparecem após os botões*/
+.TituloConteudo {
+    color: var(--text-color);
+    font-size: 25pt;
+}
+
+.TextoConteudo {
+    color: var(--text-color);
+    font-size: 20pt;
+}
+
+/*controle das imagens das regras*/
+.imgA {
+    margin: 10px;
+}
+
+/* formata o link */
+#linkUF {
+    text-align: left;
+    font-size: 25pt;
+    cursor: pointer;
+    background-color: none;
+}
